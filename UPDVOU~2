@@ -1,0 +1,31 @@
+program UpdVoucher;
+
+uses
+  Forms,
+  mainmenu in 'mainmenu.pas' {MainForm},
+  BrmFIle in 'BrmFIle.pas' {BrowFormMFiles},
+  BrowSupplier in 'BrowSupplier.pas' {BrowSupp},
+  UpdSupplier in 'UpdSupplier.pas' {UpdSupp},
+  BrowSI in 'BrowSI.pas' {BrowInvoice},
+  UpdInvoice in 'UpdInvoice.pas' {UpdSI},
+  tselect in 'tselect.pas' {rSelect},
+  BrowPayment in 'BrowPayment.pas' {BrowVoucher},
+  UpdInvDet in 'UpdInvDet.pas' {InvDet},
+  Unit1 in 'Unit1.pas' {UpdCV};
+
+{$R *.RES}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TBrowFormMFiles, BrowFormMFiles);
+  Application.CreateForm(TBrowSupp, BrowSupp);
+  Application.CreateForm(TUpdSupp, UpdSupp);
+  Application.CreateForm(TBrowInvoice, BrowInvoice);
+  Application.CreateForm(TUpdSI, UpdSI);
+  Application.CreateForm(TrSelect, rSelect);
+  Application.CreateForm(TBrowVoucher, BrowVoucher);
+  Application.CreateForm(TInvDet, InvDet);
+  Application.CreateForm(TUpdCV, UpdCV);
+  Application.Run;
+end.
