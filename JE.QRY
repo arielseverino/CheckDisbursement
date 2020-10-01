@@ -1,0 +1,24 @@
+Ver 2.0,QBE - Integra Visual Database Builder,0, 10, 1600, 1106,,,,,
+ , , - Distinct & Quote,,,,,
+    2, - Number of Tables,-1, -1, 463, 439, 455, 197,,,,
+ACCTDET.DB,ACCTDET,21, 29, 138, 154,,,,,
+Paymenthd.db,Paymenthd,155, 36, 272, 161,,,,,
+    4, - Number of Columns,,,,,,
+ACCTCODE,ACCTDET,                   1,     , ,,,
+     , - Number of Criteria,,,,,,
+CVNO,ACCTDET,                   1,     , ,,,
+     , - Number of Criteria,,,,,,
+CVNO,Paymenthd,                   1,     , ,,,
+     , - Number of Criteria,,,,,,
+DatePaid,Paymenthd,                   1,     , ,,,
+     , - Number of Criteria,,,,,,
+    1, - Number of Joins,,,,,,
+CVNO,Paymenthd,CVNO,ACCTDET,          ,          ,,
+
+"SELECT Statement"
+,,,,,,,
+SELECT	ACCTDET."ACCTCODE" , ACCTDET."CVNO" , 
+	Paymenthd."CVNO" , 
+	Paymenthd."DatePaid"
+FROM	"ACCTDET.DB" ACCTDET , "Paymenthd.db" Paymenthd
+WHERE	( Paymenthd.CVNO = ACCTDET.CVNO ),,,,,,,
